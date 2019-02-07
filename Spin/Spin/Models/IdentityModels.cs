@@ -20,7 +20,9 @@ namespace Spin.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<CourseModel> Course { get; set; }
+        public DbSet<CourseModel> CourseModels { get; set; }
+        public DbSet<TeeModel> TeeModels { get; set; }
+        public DbSet<HoleModel> HoleModels { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
