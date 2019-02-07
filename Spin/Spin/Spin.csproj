@@ -195,12 +195,30 @@
     <Compile Include="Migrations\201902071848580_HoleModelInitial.Designer.cs">
       <DependentUpon>201902071848580_HoleModelInitial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902072046390_RoundModelInitial.cs" />
+    <Compile Include="Migrations\201902072046390_RoundModelInitial.Designer.cs">
+      <DependentUpon>201902072046390_RoundModelInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902072056360_StrokesAgainstParModelInitial.cs" />
+    <Compile Include="Migrations\201902072056360_StrokesAgainstParModelInitial.Designer.cs">
+      <DependentUpon>201902072056360_StrokesAgainstParModelInitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902072101582_UpdateDataTypes.cs" />
+    <Compile Include="Migrations\201902072101582_UpdateDataTypes.Designer.cs">
+      <DependentUpon>201902072101582_UpdateDataTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902072102292_SAPPopulate.cs" />
+    <Compile Include="Migrations\201902072102292_SAPPopulate.Designer.cs">
+      <DependentUpon>201902072102292_SAPPopulate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CourseModel.cs" />
     <Compile Include="Models\HoleModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RoundModel.cs" />
+    <Compile Include="Models\StrokesAgainstParModel.cs" />
     <Compile Include="Models\TeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -293,6 +311,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902071848580_HoleModelInitial.resx">
       <DependentUpon>201902071848580_HoleModelInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902072046390_RoundModelInitial.resx">
+      <DependentUpon>201902072046390_RoundModelInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902072056360_StrokesAgainstParModelInitial.resx">
+      <DependentUpon>201902072056360_StrokesAgainstParModelInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902072101582_UpdateDataTypes.resx">
+      <DependentUpon>201902072101582_UpdateDataTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902072102292_SAPPopulate.resx">
+      <DependentUpon>201902072102292_SAPPopulate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

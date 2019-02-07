@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Spin.Models;
+using Spin.ViewModels;
 
 namespace Spin.Controllers
 {
@@ -31,9 +32,11 @@ namespace Spin.Controllers
         public ActionResult NewRound()
         {
             var courses = _context.CourseModels.ToList();
-
-
-            return View();
+            var viewModel = new NewRoundViewModel
+            {
+                CourseModels = courses
+            };
+            return View(viewModel);
         }
 
         public ActionResult Stats()

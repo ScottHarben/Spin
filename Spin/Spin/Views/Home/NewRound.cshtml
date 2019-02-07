@@ -1,4 +1,4 @@
-﻿@model Spin.Models.CourseModel
+﻿@model Spin.ViewModels.NewRoundViewModel
 @{
     ViewBag.Title = "New Round";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,8 +6,11 @@
 
 <h2>New Round</h2>
 
-@using (Html.BeginForm("Start", "Home"))
+@using (Html.BeginForm("StartNewRound", "Home"))
 {
-    
+    <div class="form-group">
+        @Html.LabelFor(m => m.RoundModel.CourseId)
+        @Html.DropDownListFor(m => m.RoundModel.CourseId, new SelectList(Model.CourseModels, "Id", "CourseName"), "Select Course", new { @class = "form-control"})
+    </div>
 }
 

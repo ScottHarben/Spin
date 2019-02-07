@@ -23,6 +23,8 @@ namespace Spin.Models
         public DbSet<CourseModel> CourseModels { get; set; }
         public DbSet<TeeModel> TeeModels { get; set; }
         public DbSet<HoleModel> HoleModels { get; set; }
+        public DbSet<RoundModel> RoundModels { get; set; }
+        public DbSet<StrokesAgainstParModel> StrokesAgainstParModels { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

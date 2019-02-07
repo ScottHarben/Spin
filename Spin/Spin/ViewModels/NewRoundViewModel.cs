@@ -9,6 +9,6 @@ namespace Spin.ViewModels
     public class NewRoundViewModel
     {
         public IEnumerable<CourseModel> CourseModels { get; set; }
-        public IEnumerable<TeeModel> TeeModels { get; set; }
+        public RoundModel RoundModel { get; set; }
     }
 }
