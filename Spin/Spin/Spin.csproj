@@ -176,6 +176,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewRoundController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +211,26 @@
     <Compile Include="Migrations\201902072102292_SAPPopulate.cs" />
     <Compile Include="Migrations\201902072102292_SAPPopulate.Designer.cs">
       <DependentUpon>201902072102292_SAPPopulate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081317236_RoundModelRemove.cs" />
+    <Compile Include="Migrations\201902081317236_RoundModelRemove.Designer.cs">
+      <DependentUpon>201902081317236_RoundModelRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081320030_RoundModelReplaceWithProperForeignKeys.cs" />
+    <Compile Include="Migrations\201902081320030_RoundModelReplaceWithProperForeignKeys.Designer.cs">
+      <DependentUpon>201902081320030_RoundModelReplaceWithProperForeignKeys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081806304_CourseModelAdd.cs" />
+    <Compile Include="Migrations\201902081806304_CourseModelAdd.Designer.cs">
+      <DependentUpon>201902081806304_CourseModelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081808590_TeeModelAdd.cs" />
+    <Compile Include="Migrations\201902081808590_TeeModelAdd.Designer.cs">
+      <DependentUpon>201902081808590_TeeModelAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081818412_HoleModelAdd.cs" />
+    <Compile Include="Migrations\201902081818412_HoleModelAdd.Designer.cs">
+      <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -279,7 +300,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\NewRound.cshtml" />
+    <Content Include="Views\NewRound\ChooseCourse.cshtml" />
     <Content Include="Views\Home\Stats.cshtml" />
     <Content Include="Views\Home\Groups.cshtml" />
   </ItemGroup>
@@ -323,6 +344,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902072102292_SAPPopulate.resx">
       <DependentUpon>201902072102292_SAPPopulate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081317236_RoundModelRemove.resx">
+      <DependentUpon>201902081317236_RoundModelRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081320030_RoundModelReplaceWithProperForeignKeys.resx">
+      <DependentUpon>201902081320030_RoundModelReplaceWithProperForeignKeys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081806304_CourseModelAdd.resx">
+      <DependentUpon>201902081806304_CourseModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081808590_TeeModelAdd.resx">
+      <DependentUpon>201902081808590_TeeModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081818412_HoleModelAdd.resx">
+      <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

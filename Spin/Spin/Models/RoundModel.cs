@@ -9,24 +9,24 @@ namespace Spin.Models
     public class RoundModel
     {
         public int Id { get; set; }
-
         public int PlayerId { get; set; }
-
         private readonly DateTime DateTime = DateTime.Today;
 
+        public CourseModel CourseModel { get; set; }
         [Display(Name = "Course")]
-        public int CourseId { get; set; }
+        public int CourseModelId { get; set; }
 
-        public int TeeId { get; set; }
+        public TeeModel TeeModel { get; set; }
+        [Display(Name = "Tees")]
+        public int TeeModelId { get; set; }
 
-        public int HoleId { get; set; }
+        public HoleModel HoleModel { get; set; }
+        [Display(Name = "Hole")]
+        public int HoleModelId { get; set; }
 
-        public bool FIR { get; set; }
-
-        public bool GIR { get; set; }
-
-        public byte PuttNumber { get; set; }
-
+        public bool FairwayInRegulation { get; set; }
+        public bool GreenInRegulation { get; set; }
+        public byte NumberOfPutts { get; set; }
         public short StrokesAgainstPar { get; set; }
     }
 }
