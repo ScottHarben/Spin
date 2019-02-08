@@ -33,13 +33,19 @@ namespace Spin.Controllers
             {
                 CourseModels = courses
             };
+
             return View(viewModel);
         }
-
-        [HttpPost]
-        public ActionResult ChooseTees(RoundModel roundModel)
+        
+        public ActionResult ChooseTees(int courseId)
         {
-            return RedirectToAction("Index", "Home");
+            var tees = _context.TeeModels.Where(c => c.CourseModelId == courseId);
+            var viewModel = new NewRoundViewModel
+            {
+                TeeModels = tees
+            };
+            
+            return View(viewModel);
         }
     }
 }

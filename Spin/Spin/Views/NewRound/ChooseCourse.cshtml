@@ -1,17 +1,26 @@
 ﻿@model Spin.ViewModels.NewRoundViewModel
 @{
-    ViewBag.Title = "New Round";
+    ViewBag.Title = "Choose Course";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Round</h2>
+<h2>Choose Course</h2>
 
-@using (Html.BeginForm("ChooseTees", "NewRound"))
-{
-    <div class="form-group">
-        @Html.LabelFor(m => m.RoundModel.CourseModelId)
-        @Html.DropDownListFor(m => m.RoundModel.CourseModelId, new SelectList(Model.CourseModels, "Id", "CourseName"), "Select Course", new { @class = "form-control"})
-    </div>
-    <button type="submit" class="btn btn-primary">Continue</button>
-}
+<div class="form-group">
+    <table class="table table-striped table-hover ">
+        <thead>
+        <tr>
+            <th>Course</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var course in Model.CourseModels)
+        {
+            <tr>
+                <td>@Html.ActionLink(course.CourseName.ToString(),"ChooseTees", "NewRound", new {courseId = course.Id}, null)</td>
+            </tr>
+        }
+        </tbody>
+    </table> 
+</div>
 
