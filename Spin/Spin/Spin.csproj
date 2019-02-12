@@ -232,6 +232,22 @@
     <Compile Include="Migrations\201902081818412_HoleModelAdd.Designer.cs">
       <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902121451532_RoundModelRemoveCourseAndTeeId.cs" />
+    <Compile Include="Migrations\201902121451532_RoundModelRemoveCourseAndTeeId.Designer.cs">
+      <DependentUpon>201902121451532_RoundModelRemoveCourseAndTeeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902121846515_AddCourseAndTeeIds.cs" />
+    <Compile Include="Migrations\201902121846515_AddCourseAndTeeIds.Designer.cs">
+      <DependentUpon>201902121846515_AddCourseAndTeeIds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902122014575_RoundModelReDo.cs" />
+    <Compile Include="Migrations\201902122014575_RoundModelReDo.Designer.cs">
+      <DependentUpon>201902122014575_RoundModelReDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902122020596_Trial.cs" />
+    <Compile Include="Migrations\201902122020596_Trial.Designer.cs">
+      <DependentUpon>201902122020596_Trial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CourseModel.cs" />
@@ -304,6 +320,7 @@
     <Content Include="Views\Home\Stats.cshtml" />
     <Content Include="Views\Home\Groups.cshtml" />
     <Content Include="Views\NewRound\ChooseTees.cshtml" />
+    <Content Include="Views\NewRound\ChooseStartingHole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -360,6 +377,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902081818412_HoleModelAdd.resx">
       <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902121451532_RoundModelRemoveCourseAndTeeId.resx">
+      <DependentUpon>201902121451532_RoundModelRemoveCourseAndTeeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902121846515_AddCourseAndTeeIds.resx">
+      <DependentUpon>201902121846515_AddCourseAndTeeIds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902122014575_RoundModelReDo.resx">
+      <DependentUpon>201902122014575_RoundModelReDo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902122020596_Trial.resx">
+      <DependentUpon>201902122020596_Trial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

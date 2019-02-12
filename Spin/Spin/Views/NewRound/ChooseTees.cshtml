@@ -10,15 +10,19 @@
     <table class="table table-striped table-hover ">
         <thead>
             <tr>
-                <th>Course</th>
+                <th>Tees</th>
+                <th>Par</th>
+                <th>Yards</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var tee in Model.TeeModels)
             {
-                <tr>
-                    <td>@Html.ActionLink(tee.TeeName.ToString(), "PlayingRound", "NewRound", new { teeId = tee.Id }, null)</td>
-                </tr>
+            <tr>
+                <td>@Html.ActionLink(tee.TeeName.ToString(), "ChooseStartingHole", "NewRound", new { teeId = tee.Id }, null)</td>
+                <td>@tee.TeePar</td>
+                <td>@tee.TeeDistance</td>
+            </tr>
             }
         </tbody>
     </table>

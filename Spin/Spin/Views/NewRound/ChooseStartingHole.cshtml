@@ -1,0 +1,29 @@
+﻿@model Spin.ViewModels.NewRoundViewModel
+@{
+    ViewBag.Title = "Choose Starting Hole";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Choose Starting Hole</h2>
+
+<div class="form-group">
+    <table class="table table-striped table-hover ">
+        <thead>
+        <tr>
+            <th>Hole</th>
+            <th>Par</th>
+            <th>Yards</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var hole in Model.HoleModels)
+        {
+            <tr>
+                <td>@Html.ActionLink("Hole " + hole.HoleNumber.ToString(), "PlayingRound", "NewRound", new { holeId = hole.Id }, null)</td>
+                <td>@hole.HolePar</td>
+                <td>@hole.HoleDistance</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

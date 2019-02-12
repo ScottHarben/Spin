@@ -11,6 +11,7 @@ namespace Spin.Controllers
     public class NewRoundController : Controller
     {
         // GET: NewRound
+        public NewRoundViewModel newRoundViewModel = new NewRoundViewModel();
 
         //***********Boilerplate****************
         private ApplicationDbContext _context;
@@ -25,16 +26,13 @@ namespace Spin.Controllers
             _context.Dispose();
         }
         //*************************************
-        
+
         public ActionResult ChooseCourse()
         {
             var courses = _context.CourseModels.ToList();
-            var viewModel = new NewRoundViewModel
-            {
-                CourseModels = courses
-            };
+            newRoundViewModel.CourseModels = courses;
 
-            return View(viewModel);
+            return View(newRoundViewModel);
         }
         
         public ActionResult ChooseTees(int courseId)
@@ -42,9 +40,20 @@ namespace Spin.Controllers
             var tees = _context.TeeModels.Where(c => c.CourseModelId == courseId);
             var viewModel = new NewRoundViewModel
             {
-                TeeModels = tees
+                TeeModels = tees,
             };
             
+            return View(viewModel);
+        }
+
+        public ActionResult ChooseStartingHole(int teeId)
+        {
+            var holes = _context.HoleModels.Where(c => c.TeeModelId == teeId);
+            var viewModel = new NewRoundViewModel
+            {
+                HoleModels = holes,
+            };
+
             return View(viewModel);
         }
     }

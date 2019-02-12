@@ -13,15 +13,12 @@ namespace Spin.Models
         private readonly DateTime DateTime = DateTime.Today;
 
         public CourseModel CourseModel { get; set; }
-        [Display(Name = "Course")]
         public int CourseModelId { get; set; }
 
         public TeeModel TeeModel { get; set; }
-        [Display(Name = "Tees")]
         public int TeeModelId { get; set; }
 
         public HoleModel HoleModel { get; set; }
-        [Display(Name = "Hole")]
         public int HoleModelId { get; set; }
 
         public bool FairwayInRegulation { get; set; }
