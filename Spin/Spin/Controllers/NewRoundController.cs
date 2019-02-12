@@ -25,27 +25,33 @@ namespace Spin.Controllers
             _context.Dispose();
         }
         //*************************************
-        
+
         public ActionResult ChooseCourse()
         {
             var courses = _context.CourseModels.ToList();
-            var viewModel = new NewRoundViewModel
-            {
-                CourseModels = courses
-            };
+            newRoundViewModel.CourseModels = courses;
 
-            return View(viewModel);
+            return View(newRoundViewModel);
         }
         
         public ActionResult ChooseTees(int courseId)
         {
+            roundModel.CourseModelId = courseId;
             var tees = _context.TeeModels.Where(c => c.CourseModelId == courseId);
-            var viewModel = new NewRoundViewModel
-            {
-                TeeModels = tees
-            };
+            newRoundViewModel.TeeModels = tees;
+            newRoundViewModel.CourseModels = Enumerable.Empty<CourseModel>();
             
-            return View(viewModel);
+            return View(newRoundViewModel);
+        }
+
+        public ActionResult SetupRound(int teeId)
+        {
+            roundModel.TeeModelId = teeId;
+            var holes = _context.HoleModels.Where(c => c.TeeModelId == teeId);
+            newRoundViewModel.HoleModels = holes;
+            newRoundViewModel.TeeModels = Enumerable.Empty<TeeModel>();
+
+            return View(newRoundViewModel);
         }
     }
 }
