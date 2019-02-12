@@ -232,6 +232,10 @@
     <Compile Include="Migrations\201902081818412_HoleModelAdd.Designer.cs">
       <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902122026136_PurgePendingChanges.cs" />
+    <Compile Include="Migrations\201902122026136_PurgePendingChanges.Designer.cs">
+      <DependentUpon>201902122026136_PurgePendingChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CourseModel.cs" />
@@ -360,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902081818412_HoleModelAdd.resx">
       <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902122026136_PurgePendingChanges.resx">
+      <DependentUpon>201902122026136_PurgePendingChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

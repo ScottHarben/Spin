@@ -11,6 +11,7 @@ namespace Spin.Controllers
     public class NewRoundController : Controller
     {
         // GET: NewRound
+        public NewRoundViewModel newRoundViewModel = new NewRoundViewModel();
 
         //***********Boilerplate****************
         private ApplicationDbContext _context;

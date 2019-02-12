@@ -9,17 +9,17 @@
 <div class="form-group">
     <table class="table table-striped table-hover ">
         <thead>
-            <tr>
-                <th>Course</th>
-            </tr>
+        <tr>
+            <th>Course</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var tee in Model.TeeModels)
-            {
-                <tr>
-                    <td>@Html.ActionLink(tee.TeeName.ToString(), "PlayingRound", "NewRound", new { teeId = tee.Id }, null)</td>
-                </tr>
-            }
+        @foreach (var tee in Model.TeeModels)
+        {
+            <tr>
+                <td>@Html.ActionLink(tee.TeeName.ToString(), "PlayingRound", "NewRound", new { teeId = tee.Id }, null)</td>
+            </tr>
+        }
         </tbody>
     </table>
 </div>
