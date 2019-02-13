@@ -9,6 +9,7 @@ namespace Spin.Models
     public class RoundModel
     {
         public int Id { get; set; }
+        public long RoundId { get; set; }
         public int PlayerId { get; set; }
         private readonly DateTime DateTime = DateTime.Today;
 

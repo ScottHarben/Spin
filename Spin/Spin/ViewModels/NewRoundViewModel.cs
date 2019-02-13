@@ -10,7 +10,7 @@ namespace Spin.ViewModels
     {
         public IEnumerable<CourseModel> CourseModels { get; set; }
         public IEnumerable<TeeModel> TeeModels { get; set; }
-        public IEnumerable<HoleModel> HoleModels { get; set; }
+        public List<HoleModel> HoleModels { get; set; }
         public RoundModel RoundModel { get; set; }
     }
 }

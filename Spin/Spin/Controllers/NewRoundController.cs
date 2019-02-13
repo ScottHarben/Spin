@@ -48,29 +48,12 @@ namespace Spin.Controllers
             return View(viewModel);
         }
 
-        public ActionResult SetupRound(int teeId)
-        {
-            var holes = _context.HoleModels.Where(c => c.TeeModelId == teeId).ToList();
-            var tees = _context.TeeModels.FirstOrDefault(c => c.Id == teeId);
-            var tee = tees.Id;
-            var course = tees.CourseModelId;
-            var roundModel = new RoundModel
-            {
-                CourseModelId = course,
-                TeeModelId = tee,
-            };
-            var viewModel = new NewRoundViewModel
-            {
-                HoleModels = holes,
-                RoundModel = roundModel,
-            };
-
-            return RedirectToAction("PlayingRound", "NewRound");
-        }
-
-        public ActionResult PlayingRound(RoundModel roundModel, NewRoundViewModel viewModel)
+        [HttpPost]
+        public ActionResult UpdateModel()
         {
             return View();
         }
+
+        
     }
 }

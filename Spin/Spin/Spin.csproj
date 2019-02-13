@@ -232,6 +232,18 @@
     <Compile Include="Migrations\201902081818412_HoleModelAdd.Designer.cs">
       <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902131533569_RoundModelAddRoundId.cs" />
+    <Compile Include="Migrations\201902131533569_RoundModelAddRoundId.Designer.cs">
+      <DependentUpon>201902131533569_RoundModelAddRoundId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902131544435_RoundModelDataType.cs" />
+    <Compile Include="Migrations\201902131544435_RoundModelDataType.Designer.cs">
+      <DependentUpon>201902131544435_RoundModelDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902131550413_RoundModelAddDateBack.cs" />
+    <Compile Include="Migrations\201902131550413_RoundModelAddDateBack.Designer.cs">
+      <DependentUpon>201902131550413_RoundModelAddDateBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CourseModel.cs" />
@@ -304,7 +316,7 @@
     <Content Include="Views\Home\Stats.cshtml" />
     <Content Include="Views\Home\Groups.cshtml" />
     <Content Include="Views\NewRound\ChooseTees.cshtml" />
-    <Content Include="Views\NewRound\PlayingRound.cshtml" />
+    <Content Include="Views\NewRound\UpdateModel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -361,6 +373,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902081818412_HoleModelAdd.resx">
       <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902131533569_RoundModelAddRoundId.resx">
+      <DependentUpon>201902131533569_RoundModelAddRoundId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902131544435_RoundModelDataType.resx">
+      <DependentUpon>201902131544435_RoundModelDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902131550413_RoundModelAddDateBack.resx">
+      <DependentUpon>201902131550413_RoundModelAddDateBack.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
