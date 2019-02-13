@@ -17,7 +17,7 @@
             @foreach (var tee in Model.TeeModels)
             {
                 <tr>
-                    <td>@Html.ActionLink(tee.TeeName.ToString(), "PlayingRound", "NewRound", new { teeId = tee.Id }, null)</td>
+                    <td>@Html.ActionLink(tee.TeeName.ToString(), "SetupRound", "NewRound", new { teeId = tee.Id }, null)</td>
                 </tr>
             }
         </tbody>
