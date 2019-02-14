@@ -31,7 +31,7 @@ namespace Spin.Controllers
             var courses = _context.CourseModels.ToList();
             var viewModel = new NewRoundViewModel
             {
-                CourseModels = courses
+                CourseModels = courses,
             };
 
             return View(viewModel);
@@ -42,39 +42,64 @@ namespace Spin.Controllers
             var tees = _context.TeeModels.Where(c => c.CourseModelId == courseId);
             var viewModel = new NewRoundViewModel
             {
-                TeeModels = tees
+                TeeModels = tees,
             };
             
             return View(viewModel);
         }
 
-        public ActionResult PlayingRound(int teeId)
+        public ActionResult ChooseStartingHole(int teeId)
         {
             var holes = _context.HoleModels.Where(c => c.TeeModelId == teeId);
-            var tees = _context.TeeModels.FirstOrDefault(c => c.Id == teeId);
-            var course = tees.CourseModelId;
-            var roundModel = new RoundModel()
-            {
-                CourseModelId = course,
-                TeeModelId = tees.Id,
-            };
             var viewModel = new NewRoundViewModel
             {
                 HoleModels = holes,
-                RoundModel = roundModel,
             };
+
+            TempData["teeId"] = teeId;
 
             return View(viewModel);
         }
 
-        [HttpPost]
-        public ActionResult Test(NewRoundViewModel viewModel)
+        public ActionResult SetupRound(int holeId)
         {
-            List<string> roundList = new List<string>();
-            roundList.Add(viewModel.RoundModel.CourseModelId.ToString());
-            roundList.Add(viewModel.RoundModel.TeeModelId.ToString());
-            roundList.Add(viewModel.RoundModel.DateTime.ToString("yyyy MMMM dd"));
-            return Content(roundList[2]);
+            var teeId = Convert.ToInt32(TempData["teeId"]);
+            var tees = _context.TeeModels.FirstOrDefault(c => c.Id == teeId);
+            var course = tees.CourseModelId;
+
+            TempData["courseId"] = course;
+            TempData["teeId"] = tees.Id;
+            TempData["startingHoleId"] = holeId;
+
+            return RedirectToAction("FirstHole","NewRound");
+        }
+
+        public ActionResult FirstHole()
+        {
+            var roundModel = new RoundModel();
+
+            if (TempData["courseId"] != null)
+            {
+                var courseId = Convert.ToInt32(TempData["courseId"]);
+                roundModel.CourseModelId = courseId;
+                TempData["courseId"] = courseId;
+            }
+
+            if (TempData["teeId"] != null)
+            {
+                var teeId = Convert.ToInt32(TempData["teeId"]);
+                roundModel.TeeModelId = teeId;
+                TempData["teeId"] = teeId;
+            }
+
+            if (TempData["StartingHoleId"] != null)
+            {
+                var StartingHoleId = Convert.ToInt32(TempData["StartingHoleId"]);
+                roundModel.HoleModelId = StartingHoleId;
+                TempData["holeId"] = StartingHoleId;
+            }
+            
+            return View();
         }
     }
 }
