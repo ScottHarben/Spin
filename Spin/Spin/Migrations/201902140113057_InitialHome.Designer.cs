@@ -7,13 +7,13 @@ namespace Spin.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CourseModelAdd : IMigrationMetadata
+    public sealed partial class InitialHome : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CourseModelAdd));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialHome));
         
         string IMigrationMetadata.Id
         {
-            get { return "201902081806304_CourseModelAdd"; }
+            get { return "201902140113057_InitialHome"; }
         }
         
         string IMigrationMetadata.Source

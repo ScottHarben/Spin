@@ -180,69 +180,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902071754357_Initial.cs" />
-    <Compile Include="Migrations\201902071754357_Initial.Designer.cs">
-      <DependentUpon>201902071754357_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902071846581_CourseModelInitial.cs" />
-    <Compile Include="Migrations\201902071846581_CourseModelInitial.Designer.cs">
-      <DependentUpon>201902071846581_CourseModelInitial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902071847591_TeeModelInitial.cs" />
-    <Compile Include="Migrations\201902071847591_TeeModelInitial.Designer.cs">
-      <DependentUpon>201902071847591_TeeModelInitial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902071848580_HoleModelInitial.cs" />
-    <Compile Include="Migrations\201902071848580_HoleModelInitial.Designer.cs">
-      <DependentUpon>201902071848580_HoleModelInitial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902072046390_RoundModelInitial.cs" />
-    <Compile Include="Migrations\201902072046390_RoundModelInitial.Designer.cs">
-      <DependentUpon>201902072046390_RoundModelInitial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902072056360_StrokesAgainstParModelInitial.cs" />
-    <Compile Include="Migrations\201902072056360_StrokesAgainstParModelInitial.Designer.cs">
-      <DependentUpon>201902072056360_StrokesAgainstParModelInitial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902072101582_UpdateDataTypes.cs" />
-    <Compile Include="Migrations\201902072101582_UpdateDataTypes.Designer.cs">
-      <DependentUpon>201902072101582_UpdateDataTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902072102292_SAPPopulate.cs" />
-    <Compile Include="Migrations\201902072102292_SAPPopulate.Designer.cs">
-      <DependentUpon>201902072102292_SAPPopulate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902081317236_RoundModelRemove.cs" />
-    <Compile Include="Migrations\201902081317236_RoundModelRemove.Designer.cs">
-      <DependentUpon>201902081317236_RoundModelRemove.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902081320030_RoundModelReplaceWithProperForeignKeys.cs" />
-    <Compile Include="Migrations\201902081320030_RoundModelReplaceWithProperForeignKeys.Designer.cs">
-      <DependentUpon>201902081320030_RoundModelReplaceWithProperForeignKeys.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902081806304_CourseModelAdd.cs" />
-    <Compile Include="Migrations\201902081806304_CourseModelAdd.Designer.cs">
-      <DependentUpon>201902081806304_CourseModelAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902081808590_TeeModelAdd.cs" />
-    <Compile Include="Migrations\201902081808590_TeeModelAdd.Designer.cs">
-      <DependentUpon>201902081808590_TeeModelAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902081818412_HoleModelAdd.cs" />
-    <Compile Include="Migrations\201902081818412_HoleModelAdd.Designer.cs">
-      <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902131533569_RoundModelAddRoundId.cs" />
-    <Compile Include="Migrations\201902131533569_RoundModelAddRoundId.Designer.cs">
-      <DependentUpon>201902131533569_RoundModelAddRoundId.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902131544435_RoundModelDataType.cs" />
-    <Compile Include="Migrations\201902131544435_RoundModelDataType.Designer.cs">
-      <DependentUpon>201902131544435_RoundModelDataType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902131550413_RoundModelAddDateBack.cs" />
-    <Compile Include="Migrations\201902131550413_RoundModelAddDateBack.Designer.cs">
-      <DependentUpon>201902131550413_RoundModelAddDateBack.cs</DependentUpon>
+    <Compile Include="Migrations\201902140113057_InitialHome.cs" />
+    <Compile Include="Migrations\201902140113057_InitialHome.Designer.cs">
+      <DependentUpon>201902140113057_InitialHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -335,53 +275,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902071754357_Initial.resx">
-      <DependentUpon>201902071754357_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902071846581_CourseModelInitial.resx">
-      <DependentUpon>201902071846581_CourseModelInitial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902071847591_TeeModelInitial.resx">
-      <DependentUpon>201902071847591_TeeModelInitial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902071848580_HoleModelInitial.resx">
-      <DependentUpon>201902071848580_HoleModelInitial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902072046390_RoundModelInitial.resx">
-      <DependentUpon>201902072046390_RoundModelInitial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902072056360_StrokesAgainstParModelInitial.resx">
-      <DependentUpon>201902072056360_StrokesAgainstParModelInitial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902072101582_UpdateDataTypes.resx">
-      <DependentUpon>201902072101582_UpdateDataTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902072102292_SAPPopulate.resx">
-      <DependentUpon>201902072102292_SAPPopulate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902081317236_RoundModelRemove.resx">
-      <DependentUpon>201902081317236_RoundModelRemove.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902081320030_RoundModelReplaceWithProperForeignKeys.resx">
-      <DependentUpon>201902081320030_RoundModelReplaceWithProperForeignKeys.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902081806304_CourseModelAdd.resx">
-      <DependentUpon>201902081806304_CourseModelAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902081808590_TeeModelAdd.resx">
-      <DependentUpon>201902081808590_TeeModelAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902081818412_HoleModelAdd.resx">
-      <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902131533569_RoundModelAddRoundId.resx">
-      <DependentUpon>201902131533569_RoundModelAddRoundId.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902131544435_RoundModelDataType.resx">
-      <DependentUpon>201902131544435_RoundModelDataType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902131550413_RoundModelAddDateBack.resx">
-      <DependentUpon>201902131550413_RoundModelAddDateBack.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201902140113057_InitialHome.resx">
+      <DependentUpon>201902140113057_InitialHome.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
