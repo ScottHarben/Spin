@@ -11,6 +11,7 @@ namespace Spin.ViewModels
         public IEnumerable<CourseModel> CourseModels { get; set; }
         public IEnumerable<TeeModel> TeeModels { get; set; }
         public IEnumerable<HoleModel> HoleModels { get; set; }
+        public IEnumerable<RoundModel> RoundModels { get; set; }
         public RoundModel RoundModel { get; set; }
     }
 }

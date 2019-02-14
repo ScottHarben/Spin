@@ -232,6 +232,14 @@
     <Compile Include="Migrations\201902081818412_HoleModelAdd.Designer.cs">
       <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902131850430_IEnumerableRoundModels.cs" />
+    <Compile Include="Migrations\201902131850430_IEnumerableRoundModels.Designer.cs">
+      <DependentUpon>201902131850430_IEnumerableRoundModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902131855008_RoundModelBoolToInt.cs" />
+    <Compile Include="Migrations\201902131855008_RoundModelBoolToInt.Designer.cs">
+      <DependentUpon>201902131855008_RoundModelBoolToInt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CourseModel.cs" />
@@ -304,6 +312,8 @@
     <Content Include="Views\Home\Stats.cshtml" />
     <Content Include="Views\Home\Groups.cshtml" />
     <Content Include="Views\NewRound\ChooseTees.cshtml" />
+    <Content Include="Views\NewRound\PlayingRound.cshtml" />
+    <Content Include="Views\NewRound\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -360,6 +370,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902081818412_HoleModelAdd.resx">
       <DependentUpon>201902081818412_HoleModelAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902131850430_IEnumerableRoundModels.resx">
+      <DependentUpon>201902131850430_IEnumerableRoundModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902131855008_RoundModelBoolToInt.resx">
+      <DependentUpon>201902131855008_RoundModelBoolToInt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

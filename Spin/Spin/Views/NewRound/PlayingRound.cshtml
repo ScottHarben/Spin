@@ -1,0 +1,14 @@
+﻿@model Spin.ViewModels.NewRoundViewModel
+@{
+    ViewBag.Title = "PlayingRound";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Playing Round</h2>
+
+@using (Html.BeginForm("Test","NewRound"))
+{
+    @Html.HiddenFor(m => m.RoundModel.CourseModelId)
+    <button type="submit">Submit</button>
+}
+

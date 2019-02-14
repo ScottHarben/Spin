@@ -10,7 +10,7 @@ namespace Spin.Models
     {
         public int Id { get; set; }
         public int PlayerId { get; set; }
-        private readonly DateTime DateTime = DateTime.Today;
+        public readonly DateTime DateTime = DateTime.Today;
 
         public CourseModel CourseModel { get; set; }
         [Display(Name = "Course")]
@@ -24,8 +24,8 @@ namespace Spin.Models
         [Display(Name = "Hole")]
         public int HoleModelId { get; set; }
 
-        public bool FairwayInRegulation { get; set; }
-        public bool GreenInRegulation { get; set; }
+        public int FairwayInRegulation { get; set; }
+        public int GreenInRegulation { get; set; }
         public byte NumberOfPutts { get; set; }
         public short StrokesAgainstPar { get; set; }
     }
