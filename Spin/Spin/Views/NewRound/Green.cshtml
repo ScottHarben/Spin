@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Green";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var hole in @Model.HoleModels)
+{
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-xs-4 text-center"><h4>Hole @hole.HoleNumber</h4></div>
+        <div class="col-xs-4 text-center"><h4>Par @hole.HolePar</h4></div>
+        <div class="col-xs-4 text-center"><h4>@hole.HoleDistance yds</h4></div>
+    </div>
+}
+
+<h1 class="text-center" style="margin-bottom: 40px">Green</h1>
+
+@using (Html.BeginForm("GreenHit", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-success btn-block">Hit Green</button>
+    </div>
+}
+
+@using (Html.BeginForm("GreenMissed", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-default btn-block">Missed Green</button>
+    </div>
+}
+

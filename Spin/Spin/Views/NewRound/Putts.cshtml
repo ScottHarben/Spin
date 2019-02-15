@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Putts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var hole in @Model.HoleModels)
+{
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-xs-4 text-center"><h4>Hole @hole.HoleNumber</h4></div>
+        <div class="col-xs-4 text-center"><h4>Par @hole.HolePar</h4></div>
+        <div class="col-xs-4 text-center"><h4>@hole.HoleDistance yds</h4></div>
+    </div>
+}
+
+<h1 class="text-center" style="margin-bottom: 40px">Putts</h1>
+
+@using (Html.BeginForm("ZeroPutt", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-primary btn-block">Hole Out</button>
+    </div>
+}
+
+@using (Html.BeginForm("OnePutt", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-success btn-block">1 Putt</button>
+    </div>
+}
+
+@using (Html.BeginForm("TwoPutt", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-info btn-block">2 Putt</button>
+    </div>
+}
+
+@using (Html.BeginForm("ThreePutt", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-default btn-block">3+ Putt</button>
+    </div>
+}
+

@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Score";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var hole in @Model.HoleModels)
+{
+    <div class="row" style="margin-top: 10px;">
+        <div class="col-xs-4 text-center"><h4>Hole @hole.HoleNumber</h4></div>
+        <div class="col-xs-4 text-center"><h4>Par @hole.HolePar</h4></div>
+        <div class="col-xs-4 text-center"><h4>@hole.HoleDistance yds</h4></div>
+    </div>
+}
+
+<h1 class="text-center" style="margin-bottom: 40px">Score</h1>
+
+<div class="row">
+    <div class="col-xs-6">
+        @using (Html.BeginForm("Albatross", "NewRound"))
+        {
+            <div class="form-group">
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Albatross</button>
+            </div>
+        }
+    </div>
+    <div class="col-xs-6">
+        @using (Html.BeginForm("Eagle", "NewRound"))
+        {
+            <div class="form-group">
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Eagle</button>
+            </div>
+        }
+    </div>
+</div>
+
+@using (Html.BeginForm("Birdie", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-success btn-block">Birdie</button>
+    </div>
+}
+
+@using (Html.BeginForm("Par", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-info btn-block">Par</button>
+    </div>
+}
+
+@using (Html.BeginForm("Bogie", "NewRound"))
+{
+    <div class="form-group">
+        <button type="submit" class="btn btn-lg btn-default btn-block">Bogie</button>
+    </div>
+}
+
+<div class="row">
+    <div class="col-xs-6">
+        @using (Html.BeginForm("Double", "NewRound"))
+        {
+            <div class="form-group">
+                <button type="submit" class="btn btn-lg btn-default btn-block">Double</button>
+            </div>
+        }
+    </div>
+    <div class="col-xs-6">
+        @using (Html.BeginForm("Triple", "NewRound"))
+        {
+            <div class="form-group">
+                <button type="submit" class="btn btn-lg btn-default btn-block">Triple</button>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+
